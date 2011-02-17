@@ -17,7 +17,11 @@ module LiquidPlanner
       def tasklists( scope=:all, options={} )
         Tasklist.find( scope, :params => { :workspace_id => self.id, :flat => true }.merge(options) )
       end
-            
+
+      def clients( scope=:all, options={} )
+        Client.find( scope, :params => { :workspace_id => self.id }.merge(options) )
+      end
+
     protected
       # create a new instance of klass (Task, Folder, etc.),
       # with the workspace_id set as a prefix option
