@@ -1,6 +1,6 @@
 require 'test/unit'
 require 'mocha'
-require File.dirname(__FILE__) + '/../lib/liquidplanner'
+require File.expand_path(File.dirname(__FILE__) + '/../lib/liquidplanner')
 
 # Very Basic tests around the workspace resource to ensure that it generates proper calls to ActiveResource.
 class WorkspaceTest < Test::Unit::TestCase

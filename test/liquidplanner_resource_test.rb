@@ -1,6 +1,6 @@
 require 'test/unit'
 require 'mocha'
-require File.dirname(__FILE__) + '/../lib/liquidplanner'
+require File.expand_path(File.dirname(__FILE__) + '/../lib/liquidplanner')
 
 # Test that the special behaviors that LiquidPlanner expects behave sanely.
 class LiquidPlannerResourceTest < Test::Unit::TestCase
