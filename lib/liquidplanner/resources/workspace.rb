@@ -26,6 +26,10 @@ module LiquidPlanner
         Project.find( scope, :params => { :workspace_id => self.id }.merge(options) )
       end
 
+      def timesheet_entries( scope=:all, options={} )
+        TimesheetEntry.find( scope, :params => { :workspace_id => self.id }.merge(options) )
+      end
+
     protected
       # create a new instance of klass (Task, Folder, etc.),
       # with the workspace_id set as a prefix option
